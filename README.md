@@ -71,3 +71,28 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Deploy to GitHub Pages
+
+This project is configured to build into the `docs/` folder so you can publish it on GitHub Pages.
+
+Steps to deploy:
+
+1. Install the deploy helper (one-time):
+
+```bash
+npm install --save-dev gh-pages
+```
+
+2. Build and deploy:
+
+```bash
+npm run predeploy
+npm run deploy
+```
+
+3. On GitHub, go to Repository Settings → Pages and set the source to the `main` branch and `/docs` folder (or `gh-pages` branch if you prefer using the `gh-pages` branch).
+
+Notes:
+- The Vite `base` is set to `/julio-reboques-aluga/` in `vite.config.ts`. Change it to `/` if you use a custom domain.
+- If you prefer automated deploys, consider adding a GitHub Action to run `npm run deploy` on push to `main`.
