@@ -23,10 +23,12 @@ const HeroSection = () => {
         <div className="max-w-4xl mx-auto text-center">
           {/* Logo */}
           <div className="mb-8 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
-            <img 
-              src={logo} 
-              alt="Júlio Reboques" 
+            <img
+              src={logo}
+              alt="Júlio Reboques"
               className="h-40 md:h-56 w-auto mx-auto drop-shadow-2xl"
+              decoding="async"
+              loading="eager"
             />
           </div>
 

@@ -13,10 +13,12 @@ const Footer = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Logo & About */}
           <div className="lg:col-span-2">
-            <img 
-              src={logo} 
-              alt="Júlio Reboques" 
+            <img
+              src={logo}
+              alt="Júlio Reboques"
               className="h-20 w-auto mb-6"
+              loading="lazy"
+              decoding="async"
             />
             <p className="text-primary-foreground/70 mb-6 max-w-md">
               Há mais de 10 anos oferecendo soluções em aluguel de reboques em Porto Alegre. 

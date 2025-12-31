@@ -18,16 +18,18 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#inicio" className="flex items-center">
-            <img 
-              src={logo} 
-              alt="Júlio Reboques" 
+          <a href="#inicio" aria-label="Júlio Reboques — Início" className="flex items-center">
+            <img
+              src={logo}
+              alt="Júlio Reboques"
               className="h-14 w-auto"
+              decoding="async"
+              loading="eager"
             />
           </a>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav aria-label="Primary Navigation" className="hidden md:flex items-center gap-8">
             {navItems.map((item) => (
               <a
                 key={item.label}
@@ -58,9 +60,9 @@ const Header = () => {
         </div>
 
         {/* Mobile Navigation */}
-        {isMenuOpen && (
+          {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-primary-foreground/10 animate-fade-in">
-            <nav className="flex flex-col gap-4">
+            <nav aria-label="Mobile Navigation" className="flex flex-col gap-4">
               {navItems.map((item) => (
                 <a
                   key={item.label}

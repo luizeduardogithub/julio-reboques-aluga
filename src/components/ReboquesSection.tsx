@@ -37,7 +37,7 @@ const ReboquesSection = () => {
   const whatsappNumber = "5551998184976";
 
   return (
-    <section id="reboques" className="py-20 bg-background">
+    <section id="reboques" aria-labelledby="reboques-heading" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -45,7 +45,7 @@ const ReboquesSection = () => {
             <Truck className="h-4 w-4" />
             <span className="text-sm font-medium">Nossos Reboques</span>
           </div>
-          <h2 className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
+          <h2 id="reboques-heading" className="font-heading font-bold text-3xl md:text-4xl lg:text-5xl text-foreground mb-4">
             Escolha o Reboque Ideal
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
@@ -62,10 +62,12 @@ const ReboquesSection = () => {
             >
               {/* Image */}
               <div className="relative h-64 md:h-80 overflow-hidden">
-                <img 
-                  src={reboque.imagem} 
+                <img
+                  src={reboque.imagem}
                   alt={reboque.nome}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                  decoding="async"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/60 to-transparent" />
                 <h3 className="absolute bottom-4 left-4 font-heading font-bold text-2xl text-primary-foreground">
